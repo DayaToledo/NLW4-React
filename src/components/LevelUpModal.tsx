@@ -3,7 +3,7 @@ import { ChallengesContext } from '../context/ChallengesContext';
 import styles from '../styles/components/LevelUpModal.module.css';
 
 export function LevelUpModal() {
-    const { level, closeLevelUpModal } =useContext(ChallengesContext);
+    const { level, closeLevelUpModal } = useContext(ChallengesContext);
 
     return (
         <div className={styles.overlay}>
