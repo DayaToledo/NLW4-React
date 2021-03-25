@@ -1,62 +1,23 @@
 import Head from 'next/head';
-import { GetServerSideProps } from 'next';
+import { useSession } from 'next-auth/client';
 
-import { ChallengeBox } from '../components/ChallengeBox';
-import { CompletedChallenges } from '../components/CompletedChallenges';
-import { Countdown } from '../components/Countdown';
-import { ExperienceBar } from "../components/ExperienceBar";
-import { Profile } from '../components/Profile';
+import { Login } from '../components/Login';
+import Challenge from './challenge';
 
-import { CountdownProvider } from '../context/CountdownContext';
-import { ChallengesProvider } from '../context/ChallengesContext';
+export default function Home() {
+  const [session] = useSession();
 
-import styles from '../styles/pages/Home.module.css'
-
-interface HomeProps {
-    level: number,
-    currentExperience: number,
-    challengeCompleted: number
-}
-
-export default function Home(props) {
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience} 
-      challengeCompleted={props.challengeCompleted}
-    >
-      <div className={styles.container}>
-        <Head>
-          <title>Início | move it</title>
-        </Head>
+    <>
+      <Head>
+        <title>Login | move it</title>
+      </Head>
 
-        <ExperienceBar/>
-        
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile/>
-              <CompletedChallenges/>
-              <Countdown/>
-            </div>
-            <div>
-              <ChallengeBox/>
-            </div>
-          </section>
-        </CountdownProvider>
-      </div>
-    </ChallengesProvider>
+      { !session ? (
+        <Login/>
+      ) : (    
+        <Challenge/>
+      )}
+    </>
   );
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengeCompleted } = ctx.req.cookies;
-
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengeCompleted: Number(challengeCompleted)
-    }
-  }
 }
