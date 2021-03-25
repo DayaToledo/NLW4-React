@@ -1,0 +1,70 @@
+.login {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12rem;
+    background-color: var(--blue);
+}
+
+.login .symbol img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.login .loginBox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 11rem 0;
+}
+
+.login .loginBox > img {
+    height: 5rem;
+    width: auto;
+    margin-bottom: 3rem;
+}
+
+.login .loginBox > strong {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.login .loginBox > strong img {
+    margin-top: 1.5rem;
+    height: 3.5rem;
+    width: auto;
+}
+
+.login .loginBox a {
+    background-color: var(--green);
+    width: 20rem;
+    height: 3.5rem;
+    border: 0;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.login .loginBox a:hover {
+    background-image: linear-gradient(to right, #4cd62b, #51cd34, #54c43a, #57bc40, #5ab345);
+}
+
+.login .loginBox a img {
+    height: 1.2rem;
+    width: auto;
+}
