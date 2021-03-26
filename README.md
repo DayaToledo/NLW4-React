@@ -6,6 +6,15 @@
 </h1>
 
 <p align="center">
+  <img alt="License" src="https://img.shields.io/github/license/DayaToledo/NLW4-React?style=for-the-badge"/>&nbsp;&nbsp;
+  <img alt="Count languages" src="https://img.shields.io/github/languages/count/DayaToledo/NLW4-React?style=for-the-badge"/>&nbsp;&nbsp;
+  <img alt="Top language" src="https://img.shields.io/github/languages/top/DayaToledo/NLW4-React?style=for-the-badge"/>&nbsp;&nbsp;
+  <img alt="Repo si" src="https://img.shields.io/github/repo-size/DayaToledo/NLW4-React?style=for-the-badge"/>&nbsp;&nbsp;
+</p>
+
+&nbsp;&nbsp;
+
+<p align="center">
  <a href="#sobre">Sobre</a>&nbsp; • &nbsp;
  <a href="#tecnologias">Tecnologias</a>&nbsp; • &nbsp;
  <a href="#screenshots">Screenshots</a>&nbsp; • &nbsp;
